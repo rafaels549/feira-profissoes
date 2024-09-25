@@ -26,20 +26,20 @@ document.getElementById('form').addEventListener('submit', async function(event)
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'application/json',
-                'api-key': 'my_secret_api_key' // Adicione sua chave de API aqui
+                'api-key': 'my_secret_api_key' 
             },
-            body: JSON.stringify({ prompt: promptText }) // Corpo modificado
+            body: JSON.stringify({ prompt: promptText }) 
         });
 
         if (response.ok) {
             const result = await response.json();
 
-            // Verifica se o resultado tem alguma mensagem
-            if (result.message && result.message.trim() !== '') {
-                typeText(result.message);
+         
+            if (result.response && result.response.trim() !== '') {
+                typeText(result.response);
                 console.log('Sucesso:', result);
             } else {
-                // Se não houver dados na resposta
+             
                 typeText('Ainda não aprendi sobre essa profissão.');
                 console.log('Profissão não encontrada');
             }
