@@ -79,6 +79,7 @@ textarea {
     position: relative;
     width: 100%;
     margin-top: 20px;
+ 
 }
 
 
@@ -90,6 +91,9 @@ textarea {
     flex-grow: 1;
     box-sizing: border-box;
     font-size: 16px;
+    border: none;
+    outline: none;
+    box-shadow: none; 
 }
 
 
